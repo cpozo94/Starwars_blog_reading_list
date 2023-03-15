@@ -2,6 +2,7 @@ import React, {useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import people from "./services/index.js";
+import Prueba from "./views/prueba.js";
 
 
 import { Home } from "./views/home";
@@ -31,6 +32,7 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/people/:id" element={<Prueba />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
