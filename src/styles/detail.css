@@ -1,0 +1,19 @@
+table{
+  text-align: center;
+}
+
+th{
+  color:rgb(202, 52, 52);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+td{
+  color:rgb(202, 52, 52);
+  font-size: 15px;
+  font-style: oblique;
+}
+
+tbody{
+  border-bottom: 0;
+}

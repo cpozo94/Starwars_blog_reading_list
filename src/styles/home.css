@@ -1,0 +1,14 @@
+.contenedorscroll{
+    min-width: 70%;
+    overflow-x:scroll; 
+    padding: 20px 0px;
+    margin-bottom: 30px;
+}
+
+.titulo{
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(202, 52, 52);
+}

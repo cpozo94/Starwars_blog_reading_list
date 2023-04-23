@@ -12,20 +12,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			favorites:[
+
 			]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
+			
 			changeColor: (index, color) => {
-				//get the store
+				
 				const store = getStore();
 
 				//we have to loop the entire demo array to look for the respective index
@@ -37,6 +33,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			addLike:(name) =>{
+				const store= getStore();
+				if(!store.favorites.includes(name)){
+				setStore({favorites: [...store.favorites,name]})
+				}
+			},
+			deleteLikes:(index)=>{
+				const store= getStore();
+				const arrayAux= [...store.favorites];
+				arrayAux.splice(index,1);
+				setStore({favorites:[...arrayAux]});
 			}
 		}
 	};
